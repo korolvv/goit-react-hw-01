@@ -1,4 +1,17 @@
 .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 3px solid #000;
+	border-radius: 10px;
+	background-color: #fafafa;
+	height: max-content;
+	width: 550px;
+	overflow: hidden;
+	margin: 50px auto;
+}
+
+.top_wrapper {
 	padding: 25px 0 32px;
 	display: flex;
 	flex-direction: column;
@@ -20,19 +33,24 @@
 	width: 230px;
 }
 
-p {
-	color: #7f7f7f;
-	font-size: 40px;
-}
 .name {
 	color: #000;
 	font-size: 40px;
 	margin-bottom: 25px;
 	font-weight: 700;
+	font-size: 40px;
 }
 .tag {
 	margin-bottom: 10px;
+	color: #7f7f7f;
+	font-size: 40px;
 }
+
+.location {
+	color: #7f7f7f;
+	font-size: 40px;
+}
+
 .stats {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -57,7 +75,7 @@ p {
 	font-weight: 700;
 }
 
-span {
+.stats_item > span {
 	display: block;
 	font-size: 32px;
 }

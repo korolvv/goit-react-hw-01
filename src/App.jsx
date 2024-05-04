@@ -1,22 +1,20 @@
-import css from "./App.module.css";
+import "./App.css";
 import Profile from "./components/Profile/Profile";
+import FriendList from "./components/FriendList/FriendList";
 import userData from "./userData.json";
+import friends from "./friends.json";
 
 const App = () => {
-	const { name, tag, location, image, stats } = userData;
 	return (
 		<>
-			<ul className={css.list}>
-				<li className={css.item}>
-					<Profile
-						name={name}
-						tag={tag}
-						location={location}
-						image={image}
-						stats={stats}
-					/>
-				</li>
-			</ul>
+			<Profile
+				name={userData.name}
+				tag={userData.tag}
+				location={userData.location}
+				image={userData.image}
+				stats={userData.stats}
+			/>
+			<FriendList friends={friends} />
 		</>
 	);
 };

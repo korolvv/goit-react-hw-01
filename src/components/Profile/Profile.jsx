@@ -8,14 +8,14 @@ export default function Profile({
 	stats: { followers, views, likes },
 }) {
 	return (
-		<>
-			<div className={css.wrapper}>
+		<div className={css.wrapper}>
+			<div className={css.top_wrapper}>
 				<div className={css.img_wrapper}>
 					<img className={css.avatar} src={image} alt="User avatar" />
 				</div>
 				<p className={css.name}>{name}</p>
 				<p className={css.tag}>@{tag}</p>
-				<p>{location}</p>
+				<p className={css.location}>{location}</p>
 			</div>
 
 			<ul className={css.stats}>
@@ -32,6 +32,6 @@ export default function Profile({
 					<span>{likes}</span>
 				</li>
 			</ul>
-		</>
+		</div>
 	);
 }
